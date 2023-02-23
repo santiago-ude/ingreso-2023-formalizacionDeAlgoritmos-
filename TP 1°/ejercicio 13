@@ -1,0 +1,15 @@
+Algoritmo ejercicioTrece
+	
+	definir descuento, precioInicial, precioFinal, cuenta como entero;
+	
+	Escribir "Dame el precio del producto que quieras?";
+	Leer precioInicial;
+	
+	Escribir "Decime que descuento le queres dar";
+	leer descuento;
+	
+	cuenta = (precioInicial*descuento)/100;
+	precioFinal = precioInicial - cuenta;
+	Escribir "Como soy bueno el producto te va a salir ", precioFinal;
+	
+FinAlgoritmo
