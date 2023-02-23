@@ -1,0 +1,16 @@
+Algoritmo ejercicioDos
+	
+	Definir numUno, numDos Como Entero;
+	
+	Escribir "dame dos numeros y te mostrare el mayor";
+	leer numUno, numDos;
+	
+	Si (numUno > numDos) Entonces
+		Escribir "El numero mayor es ",numUno;
+		
+	SiNo
+		Escribir "El numero mayor es ",numDos;
+	FinSi
+	
+	
+FinAlgoritmo
