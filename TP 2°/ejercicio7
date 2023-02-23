@@ -1,0 +1,29 @@
+Algoritmo ejercicio7
+	
+	Definir cantidadHoras1,cantidadHoras2, salarioMinimo, salarioGod, horasExtra como entero;
+	Definir respuesta como caracter;
+	
+	Escribir "Trabajaste mas de 40 horas rey?";
+	Leer respuesta;
+	
+	si(respuesta == "no") entonces
+		Escribir "Y cuantas horas trabajaste?";
+		Leer cantidadHoras1;
+		salarioMinimo = 300*cantidadHoras1;
+		Escribir "Tu salario es $", salarioMinimo;
+		
+	sino si(respuesta == "si") entonces
+			Escribir "Que bien genio cuantas horas extra metiste?";
+			Leer horasExtra;
+			
+			salarioGod = (300*40) + horasExtra*400;
+			
+			Escribir "Tu salario es de $", salarioGod;
+		FinSi
+	FinSi
+	
+	
+	
+	
+FinAlgoritmo
+	
