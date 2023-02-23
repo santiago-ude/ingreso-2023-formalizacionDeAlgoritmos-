@@ -1,0 +1,18 @@
+Algoritmo  ejercicioNueve
+	
+	Definir perimetroRectangulo, areaRectangulo, base, altura Como Entero;
+	
+	Escribir "Cual es la base del rectangulo?";
+	leer base;
+	
+	Escribir "Cual es la altura del rectangulo?";
+	leer altura;
+	
+	areaRectangulo = base*altura;
+	
+	perimetroRectangulo = (base + altura)*2;
+	
+	Escribir "El perimetro del rectangulo va a ser: ", perimetroRectangulo, " y el area del mismo es: " areaRectangulo;
+	
+	
+FinAlgoritmo
