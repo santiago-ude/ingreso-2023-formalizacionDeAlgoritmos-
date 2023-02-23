@@ -1,0 +1,18 @@
+Algoritmo ejercicioDos
+	
+	Definir parcialUno, parcialDos, parcialTres, promedio Como Entero;
+	
+	Escribir "Como te fue en tu primer parcial?";
+	leer ParcialUno;
+	
+	Escribir "como te fue en tu segundo parcial?";
+	leer parcialDos;
+	
+	Escribir "como te fue en tu tercer parcial?";
+	leer parcialTres;
+	
+	promedio = (ParcialUno + parcialDos + parcialTres)/3;
+	
+	Escribir "Tu promedio entre los 3 parciales es: ", promedio;
+	
+FinAlgoritmo
