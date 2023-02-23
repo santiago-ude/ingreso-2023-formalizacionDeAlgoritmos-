@@ -1,0 +1,20 @@
+Algoritmo ejercicioTres
+	
+	Definir añoNacimiento, añoActual, edad Como Entero;
+	
+	Escribir "En que año estamos?";
+	Leer añoActual; 
+	
+	Escribir "En que año naciste?";
+	leer añoNacimiento;
+	
+	edad = añoActual - añoNacimiento;
+	
+	si(edad > 18) Entonces
+		Escribir "Tu edad es ", edad, " la muestro solo porque sos mayor";
+	SiNo
+		Escribir "no voy a mostrar tu edad porque sos menor";
+	FinSi
+	
+	
+FinAlgoritmo
