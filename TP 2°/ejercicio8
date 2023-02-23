@@ -1,0 +1,21 @@
+Algoritmo ejercicioOcho
+	
+	Definir numUno, numDos Como Entero;
+	
+	Escribir "Dame un numero";
+	Leer numUno;
+	
+	Escribir "Dame otro numero";
+	Leer numDos;
+	
+	
+	si(numUno > numDos) Entonces
+		Escribir numUno;
+		Escribir numDos;
+	SiNo
+		Escribir numDos;
+		Escribir numUno;
+		
+	FinSi
+	
+FinAlgoritmo
