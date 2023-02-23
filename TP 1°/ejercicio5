@@ -1,0 +1,15 @@
+Algoritmo ejercicioCinco
+	
+	Definir precioInicial, precioFinal, cuenta como entero;
+	
+	Escribir "Cual es el precio de su producto?";
+	Leer precioInicial;
+	
+	cuenta = (precioInicial*15)/100;
+	
+	precioFinal = precioInicial - cuenta;
+	
+	Escribir precioFinal;
+
+	
+FinAlgoritmo
