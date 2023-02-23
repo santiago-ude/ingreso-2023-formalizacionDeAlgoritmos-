@@ -1,0 +1,11 @@
+Algoritmo ejercicioUno
+		
+	Definir numOne, numTwo, result Como Entero;
+	
+	Escribir ("Dame dos numeros para sumar");
+	Leer numOne, numTwo;
+	
+	result = numOne + numTwo;
+	
+	Escribir "El resultado de tu suma es: ",result;
+FinAlgoritmo
