@@ -1,0 +1,24 @@
+Algoritmo ejercicioCuatro
+	
+	Definir firstNote, secondNote, thirdNote Como Entero;
+	Definir  promedio Como Real;
+	
+	Escribir "Cual fue tu primera nota?";
+	Leer firstNote;
+	
+	Escribir "cual fue tu segunda nota?";
+	Leer secondNote;
+	
+	Escribir "cual fue tu tercer nota?";
+	Leer thirdNote;
+	
+	promedio =  (firstNote + secondNote + thirdNote)/3;
+	
+	si(promedio > 6) Entonces
+		Escribir "Aprobaste campeon sos muy crack";
+	SiNo
+		Escribir "No champion no te alcanza la nota para aprobar la materia";
+	FinSi
+	
+	
+FinAlgoritmo
