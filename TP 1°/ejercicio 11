@@ -1,0 +1,19 @@
+Algoritmo ejercicioOnce
+	
+	Definir dateA, dateB, dateC, dateD Como Real;
+	
+	Escribir "Dame un dato";
+	Leer dateA;
+	
+	Escribir "Dame tu segundo dato";
+	Leer dateB;
+	
+	Escribir "Dame tu tercer dato";
+	Leer dateC;
+	
+	Escribir "Dame tu cuarto dato";
+	Leer dateD;
+	
+	Escribir "En el orden inverso seria asi " dateD, dateC, dateB, dateA;
+	
+FinAlgoritmo
