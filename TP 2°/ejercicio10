@@ -1,0 +1,27 @@
+Algoritmo ejercicioDiez
+	
+	Definir numUno, numDos como entero;
+	Definir cuenta, multiplicacion, suma, resta Como Real;
+	
+	Escribir "Dame un numero";
+	Leer numUno;
+	
+	Escribir "Dame otro numero";
+	Leer numDos;
+	
+	si(numUno == numDos) entonces
+		multiplicacion = numUno*NumDos;
+		Escribir multiplicacion;
+	
+    sino si (numUno > numDos) Entonces
+			resta = numUno - numDos;
+			Escribir resta;
+			
+		SiNo
+			suma = numUno + numDos;
+			Escribir suma;
+		FinSi
+		 
+	FinSi
+	
+FinAlgoritmo
