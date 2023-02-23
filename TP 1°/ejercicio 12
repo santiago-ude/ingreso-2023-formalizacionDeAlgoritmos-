@@ -1,0 +1,12 @@
+Algoritmo ejercicioDoce
+	
+	Definir dateIva, precioProducto Como Entero;
+	
+	Escribir "Precio del producto:";
+	leer precioProducto;
+	
+	dateIva = (precioProducto*21)/100;
+	
+	Escribir "El IVA de tu producto es ", dateIva;
+	
+FinAlgoritmo
