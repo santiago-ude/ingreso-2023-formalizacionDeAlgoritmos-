@@ -1,1 +1,13 @@
 
+Algoritmo ejercicioUno
+	
+	definir numUno Como Entero;
+	escribir "dame un numero";
+	leer numUno;
+	Si (numUno > 0) Entonces
+		Escribir "Numero mayor a cero ";
+	SiNo
+		Escribir "numero menor o igual a cero";
+	FinSi
+	
+FinAlgoritmo
