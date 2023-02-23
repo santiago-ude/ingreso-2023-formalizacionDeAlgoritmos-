@@ -1,0 +1,17 @@
+Algoritmo ejercicioCinco
+	
+	Definir numUno, cuenta Como Entero;
+	
+	Escribir "Dame un numero king";
+	Leer numUno;
+	
+	cuenta = numUno MOD 2;
+	
+	si(cuenta == 0)Entonces
+		Escribir "Este numero es par genio";
+	SiNo
+		Escribir "Es impar el numero malardo";
+	FinSi
+	
+	
+FinAlgoritmo
