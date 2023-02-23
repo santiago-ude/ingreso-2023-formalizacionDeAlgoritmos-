@@ -1,0 +1,26 @@
+Algoritmo ejercicioOnce
+	
+	Definir numUno, numDos, numTres Como entero;
+	
+	Escribir "Dame el primer numero";
+	leer numUno;
+	
+	Escribir "Dame el segundo numero";
+	leer numDos;
+	
+	Escribir "Dame el tercer numero";
+	leer numTres;
+	
+	
+	si(numUno > numDos && numUno > numTres) entonces 
+		Escribir numUno, " Es el numero mas grande";
+		
+	sino si(numDos > numUno && numDos > numTres)entonces
+			Escribir numDos, " Es el numero mas grande";
+	SiNo
+		Escribir numTres, " Es el numero mas grande";
+	FinSi
+	FinSi
+	
+	
+FinAlgoritmo
