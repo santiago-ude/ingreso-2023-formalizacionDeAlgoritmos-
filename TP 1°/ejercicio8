@@ -1,0 +1,13 @@
+Algoritmo ejercicioOcho
+	
+	Definir radioCirculo, areaCirculo Como Real;
+	
+	Escribir "Cual es el radio del circulo?";
+	leer radioCirculo;
+	
+	
+	areaCirculo =  PI*(radioCirculo↑2);
+	
+	Escribir "El area del circulo sera de: ",areaCirculo;
+	
+FinAlgoritmo
