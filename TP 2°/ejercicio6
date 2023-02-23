@@ -1,0 +1,17 @@
+Algoritmo ejercicioSeis
+	
+	Definir gastoInicial como entero;
+	Definir gastoFinal, cuenta Como Real;
+	
+	Escribir "cuanto gastaste en tu compra?";
+	Leer gastoInicial;
+	cuenta = (gastoInicial*20)/100;
+	gastoFinal = gastoInicial - cuenta;
+	si(gastoInicial > 5000) Entonces
+		Escribir "Como gastaste mas de 5000 tenes un 20% de descuento asi que tenes que pagar: ", gastoFinal;
+	SiNo
+		Escribir "Tienes que pagar: ", gastoInicial;
+		
+	FinSi
+	
+FinAlgoritmo
