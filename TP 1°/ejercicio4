@@ -1,0 +1,15 @@
+Algoritmo ejercicioCuatro
+		
+		Definir inversion, meses, ganancia Como Entero;
+		Escribir "Cual va a ser su inversion?";
+		Leer inversion;
+		
+		Escribir "Cuantos meses va a durar su inversion";
+		leer meses;
+		
+		ganancia = ((inversion*(meses*2))/100);
+		
+		Escribir ganancia;
+		
+FinAlgoritmo
+
