@@ -1,0 +1,22 @@
+Algoritmo ejercicioNueve
+	
+	Definir cantidadCamisas, precioCamisa Como Entero;
+	Definir cuenta20, cuenta10, precioFinal20, precioFinal10 Como Real;
+	precioCamisa = 100;
+	
+	Escribir "Cuantas camisas vas a llevar?";
+	Leer cantidadCamisas;
+	
+	cuenta20 = ((precioCamisa*cantidadCamisas)*20)/100;
+	cuenta10 = ((precioCamisa*cantidadCamisas)*10)/100;
+	
+	precioFinal20 = (precioCamisa*cantidadCamisas) - cuenta20;
+	precioFinal10 = (precioCamisa*cantidadCamisas) - cuenta10;
+	si(cantidadCamisas >= 3) Entonces
+		Escribir "Tu descuento es del 20% y pagaras $", precioFinal20;
+	SiNo
+		Escribir "Tu descuento es del 10% y pagaras $", precioFinal10;
+	FinSi
+	
+	
+FinAlgoritmo
