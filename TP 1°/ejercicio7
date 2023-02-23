@@ -1,0 +1,14 @@
+Algoritmo ejercicioSiete
+	
+	Definir catetoUno, catetoDos, cuenta como entero;
+	Definir hipotenusa Como real;
+	Escribir "Cuanto mide el primer cateto?";
+	Leer catetoUno;
+	
+	Escribir "Cuanto mide el segundo cateto?";
+	Leer catetoDos;
+	
+	cuenta = (catetoUno↑2 + catetoDos↑2);
+	hipotenusa = RC(cuenta);
+	Escribir hipotenusa;
+FinAlgoritmo
