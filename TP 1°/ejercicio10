@@ -1,0 +1,15 @@
+Algoritmo ejercicioDiez
+	
+	Definir edad, añoNacimiento, añoActual Como Entero;
+	
+	Escribir "Cual es el año actual?";
+	leer añoActual;
+	
+	Escribir "En que año naciste?";
+	Leer añoNacimiento;
+	
+	edad = añoActual - añoNacimiento;
+	
+	Escribir "Tu edad es ",edad;
+	
+FinAlgoritmo
