@@ -1,0 +1,11 @@
+Algoritmo ejercicioTres
+	
+	Definir inversion, ganancia Como Entero;
+	Escribir "Cual va a ser su inversion?";
+	Leer inversion;
+	
+	ganancia = ((inversion*2)/100);
+	
+	Escribir ganancia;
+	
+FinAlgoritmo
