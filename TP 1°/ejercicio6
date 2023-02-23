@@ -1,0 +1,21 @@
+Algoritmo ejercicioSeis
+	
+	Definir estudiantes, mujeres, hombres, porcentajeAlumnos, cuentaHombres, cuentaMujeres Como Entero;
+	
+	
+	Escribir "Cuantos estudiantes hay en tu clase?";
+	Leer estudiantes;
+	
+	Escribir "Cuantos hombres?";
+	leer hombres;
+	
+	Escribir "Cuantas mujeres?";
+	Leer mujeres;
+	
+	
+	cuentaHombres = (hombres*100)/estudiantes;
+	cuentaMujeres = (mujeres*100)/estudiantes;
+
+	Escribir "en tu clase hay un ", cuentaHombres,"% de hombres y un ", cuentaMujeres,"% de mujeres.";
+	
+FinAlgoritmo
