@@ -1,0 +1,21 @@
+Algoritmo ejercicioDos
+	
+	Definir op, contador, imparPar como real;
+	
+	op = 1;
+	contador = 0;
+	
+	mientras(op == 1 && contador < 20) Hacer
+		contador = contador + 1;
+		
+		imparPar = contador MOD 2;
+		
+		si(imparPar == 1)
+			Escribir contador;
+		SiNo
+			Escribir "";
+		FinSi
+	FinMientras
+	
+	
+FinAlgoritmo
