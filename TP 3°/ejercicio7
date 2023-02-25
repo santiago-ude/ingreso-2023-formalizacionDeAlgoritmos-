@@ -1,0 +1,21 @@
+Algoritmo ejercicioSiete
+	
+	Definir cantidadEntregadas, op Como Entero;
+	Definir cantidadVacunas Como Real;
+	
+	
+	op = 1;
+	cantidadVacunas = 1000;
+	
+	Mientras (op == 1 && suma < 800) Hacer
+		
+		Escribir "Cantidad entregadas";
+		Leer cantidadEntregadas;
+		
+		suma = suma + cantidadEntregadas;
+		
+	FinMientras
+	
+	Escribir "QUEDAN SOLO 200 UNIDADES O MENOS";
+	
+FinAlgoritmo
