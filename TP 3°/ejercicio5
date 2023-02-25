@@ -1,0 +1,27 @@
+Algoritmo ejercicioCinco
+	
+	Definir op, num Como Entero;
+	Definir contador, suma Como Real;
+	
+	op = 1;
+	contador = 0;
+	suma = 0;
+	
+	
+	
+	Mientras (op == 1 & contador < 10) Hacer
+		contador = contador + 1;
+		Escribir "Dame un numero";
+		Leer num;
+		
+		 suma = suma + num;
+		
+	FinMientras
+	
+	promedio = suma/contador
+	
+	Escribir "La suma es ", suma;
+	Escribir "Y el promedio es ", promedio;
+	
+	
+FinAlgoritmo
