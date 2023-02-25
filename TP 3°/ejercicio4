@@ -1,0 +1,19 @@
+Algoritmo ejercicioCuatro
+	
+	Definir suma, contador como real;
+	Definir op Como Entero;
+	
+	op = 1;
+	suma = 0;
+	contador = 0;
+	
+	Mientras (op == 1 & contador <= 20) Hacer
+		contador = contador + 1;
+		
+		suma = contador + suma;
+		
+		Escribir contador, "+", suma, " = ", (contador + suma);
+		
+	FinMientras
+	
+FinAlgoritmo
