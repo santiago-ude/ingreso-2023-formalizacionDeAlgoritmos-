@@ -1,0 +1,16 @@
+Algoritmo ejercicioTres
+	
+	Definir op, contador, cuadrado como real;
+	
+	op = 1;
+	contador = 80;
+	
+	Mientras (op = 1 & contador <= 100) Hacer
+		contador = contador + 1;
+		cuadrado = contador^2;
+		
+		Escribir contador, " al cuadrado es: ", cuadrado;
+	FinMientras
+	
+	
+FinAlgoritmo
