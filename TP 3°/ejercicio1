@@ -1,0 +1,16 @@
+Algoritmo ejercicioUno
+	
+	Definir contador, op Como Real;
+	
+	op = 1;
+	contador = 0;
+	
+	mientras(op == 1 && contador < 10) Hacer
+		
+		contador = contador + 1;
+		Escribir contador;
+		
+	FinMientras
+	
+	
+FinAlgoritmo
