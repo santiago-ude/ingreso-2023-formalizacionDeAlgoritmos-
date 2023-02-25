@@ -1,0 +1,33 @@
+Algoritmo ejercicioSeis
+	
+	Definir numeroPiezas, op Como Entero;
+	Definir contador, ancho, largo, contadorAptas Como Real;
+	
+	op = 1;
+	contador = 0;
+	
+	
+	Escribir "Cuantas piezas necesitas procesar";
+	Leer numeroPiezas;
+	
+	
+	Mientras (op == 1 && contador < numeroPiezas) Hacer
+		
+		contador = contador + 1;
+		
+		Escribir "largo de la pieza ", contador;
+		leer largo;
+		
+		Escribir "Ancho de la pieza ", contador;
+		Leer ancho;
+		
+		si(ancho >= 1.30 & largo >= 1.20) Entonces
+			contadorAptas = contadorAptas + 1;
+		FinSi
+		
+	FinMientras
+	
+	
+	Escribir "Las piezas aptas son: ", contadorAptas;
+	
+FinAlgoritmo
