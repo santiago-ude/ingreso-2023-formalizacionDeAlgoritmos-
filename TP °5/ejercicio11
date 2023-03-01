@@ -1,0 +1,26 @@
+Algoritmo ejercicio11
+	
+	Definir contador1, contador2 Como Real;
+	Definir numeroEntero, elFinal como entero;
+	
+	elFinal = 0;
+	
+	Escribir "Cuantos numeros vas a ingresar?";
+	Leer elFinal;
+	
+	para i = 1 Hasta elFinal Con Paso 1 Hacer
+		Escribir "Dame un numero";
+		Leer numeroEntero;
+		
+		si (numeroEntero >= 1000) Entonces
+			contador1 = contador1 + 1;
+		SiNo
+			contador2 = contador2 + 1;
+	FinSi
+	FinPara
+	
+	Escribir "De los ", elFinal, " numeros que ingresaste ";
+	Escribir contador1, " son mayores o iguales a 1000";
+	Escribir "Y ", contador2, " son menores a 1000";
+	
+FinAlgoritmo
