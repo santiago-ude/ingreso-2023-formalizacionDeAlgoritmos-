@@ -1,0 +1,25 @@
+Algoritmo ejercicio6
+	
+	Definir nota, cantidadAlumnos, contador, contador2 Como Entero;
+	
+	
+	cantidadAlumnos = 10;
+	
+	
+	para i = 0 Hasta cantidadAlumnos Con Paso 1 Hacer
+		Escribir "Nota del alumno ", i + 1;
+		Leer nota;
+		
+		si(nota >= 7)Entonces
+			contador = contador + 1;
+		SiNo
+			contador2 = contador2 + 1;
+		FinSi
+		
+		
+	FinPara
+	
+	Escribir "Alumnos con una nota mayor o igual a 7: ", contador;
+	Escribir "Alumnos con una nota menor a 7: ", contador2;
+	
+FinAlgoritmo
