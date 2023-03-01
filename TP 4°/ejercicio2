@@ -1,0 +1,25 @@
+Algoritmo ejercicio2
+	
+	Definir op, num Como Entero;
+	Definir contador, suma, promedio Como Real;
+	
+	Repetir
+		contador = contador + 1;
+		suma = suma + num
+		
+		Escribir "Escribe tu numero";
+		Leer num;
+		
+		Escribir " 1 Seguir ingresando / sacar promedio 0";
+		Leer op;
+		
+		
+		
+		Hasta Que(op == 0);
+		
+		promedio = suma/contador;
+		
+		Escribir "El promedio de los numeros ingresados es: ", promedio;
+	
+	
+FinAlgoritmo
