@@ -1,0 +1,33 @@
+Algoritmo ejercicio10
+	
+	Definir multiplo3,multiplo5,contador3,contador5 Como Real;
+	Definir number Como Entero;
+	
+	para i = 1 Hasta 5 Con Paso 1 Hacer
+		
+		Escribir "Dame un numero";
+		Leer number;
+		
+		multiplo3 = number MOD 3;
+		multiplo5 = number MOD 5;
+		
+		
+		si(multiplo5 == 0 & multiplo3 == 0) /// NO ME SUMA EL contador5 CUANDO TAMBIEN ES MULTIPLO DE 3
+			contador5 = contador5 + 1;
+			contador3 = contador3 + 1;
+			
+		sino si(multiplo3 == 0) Entonces
+			contador3 = contador3 + 1;
+			
+		sino si(multiplo5 == 0)
+			contador5 = contador5 + 1;		
+					
+				FinSi
+			FinSi
+		FinSi
+	FinPara
+	
+	Escribir "multiplos de 3: ", contador3;
+	Escribir "multiplos de 5: ", contador5;
+	
+FinAlgoritmo
