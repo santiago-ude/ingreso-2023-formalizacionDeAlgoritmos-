@@ -1,0 +1,16 @@
+Algoritmo ejercicio7
+	
+	Definir numeroNegativo Como Entero;
+	Definir numeroPositivo Como Real;
+	
+	
+	para i = 0 hasta 15 Con Paso 1 Hacer
+		Escribir "Dame 15 numeros negativos";
+		Leer numeroNegativo;
+		
+		numeroPositivo = numeroNegativo *(-1);
+		Escribir numeroPositivo;
+	FinPara
+	
+	
+FinAlgoritmo
