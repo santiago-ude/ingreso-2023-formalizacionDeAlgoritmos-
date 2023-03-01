@@ -1,0 +1,28 @@
+Algoritmo ejercicio4
+	
+	Definir op, numSuma Como Entero;
+	Definir suma Como Real
+	
+	
+	Repetir
+		suma = suma + numSuma;
+		
+		Escribir "Dame un numero para sumar";
+		Leer numSuma;
+		
+		Escribir "9999 salir / 0 seguir";
+		Leer op;
+		Hasta Que(op == 9999) 
+		
+		si(suma == 0) Entonces
+			Escribir suma, " Es igual a 0";
+			
+		sino si(suma > 0)
+				Escribir suma, " Es mayor a 0";
+				
+			SiNo
+				Escribir suma, " Es menor a 0";
+	    FinSi
+		FinSi
+	
+FinAlgoritmo
