@@ -1,1 +1,30 @@
 
+Algoritmo ejercicio1
+	
+	Definir contador Como Real;
+	Definir op, numEjemplo Como Entero;
+	
+	
+	Repetir
+		
+		Escribir  "Dame un numero entre 0 y 999";
+		Leer numEjemplo;
+		
+		si(numEjemplo >= 0 && numEjemplo < 10)Entonces
+			Escribir numEjemplo, " tiene 1 digito.";
+			
+		SiNo si(numEjemplo >= 10 && numEjemplo < 100) 
+			Escribir numEjemplo, " Tiene 2 digitos.";
+			
+		sino si(numEjemplo >= 100 && numEjemplo <= 999)
+				Escribir numEjemplo, " Tiene 3 digitos.";
+				
+	    FinSi
+		FinSi
+		FinSi
+		Escribir "1 para ingresar otro numero, 2 para finalizar";
+		Leer op;
+	Hasta Que(op == 2); 
+	
+	
+FinAlgoritmo
