@@ -1,0 +1,19 @@
+Algoritmo ejercicio4
+	
+	Definir number Como Entero;
+	
+	Para i=0 Hasta 10 Con Paso 1 Hacer
+		Escribir "dame un numero";
+		Leer number;
+		
+		si(number > 0)Entonces
+			Escribir number;
+			
+		SiNo
+			Escribir "";
+		FinSi
+		
+	FinPara
+	
+	
+FinAlgoritmo
