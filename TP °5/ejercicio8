@@ -1,0 +1,28 @@
+Algoritmo ejercicio8
+	
+	Definir nota Como Entero;
+	Definir notaBaja, promedio, suma, cantidadNotas Como Real;
+	
+	
+	cantidadNotas = 30;
+	notaBaja = 100000;
+	
+	para i = 0 Hasta cantidadNotas Con Paso 1 Hacer
+		Escribir "Calificacion:";
+		Leer nota;
+		
+		suma = suma + nota;
+		
+		si(nota < notaBaja) Entonces
+			notaBaja = nota;
+		FinSi
+		
+	FinPara
+	promedio = suma/cantidadNotas;
+	
+	
+	Escribir "La nota promedio es: ", promedio;
+	Escribir "Y la nota mas baja es: ", notaBaja;
+	
+	
+FinAlgoritmo
