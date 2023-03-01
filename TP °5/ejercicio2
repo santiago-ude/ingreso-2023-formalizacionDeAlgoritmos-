@@ -1,0 +1,16 @@
+Algoritmo ejercicio2
+	
+	Definir calificacion, suma, promedio Como Real;
+	
+	Para i = 0 Hasta 7 Con Paso 1 Hacer
+		suma = suma + calificacion;
+		
+		Escribir "Dame tu nota";
+		Leer calificacion;
+	FinPara
+	
+	promedio = suma/7;
+	
+	Escribir "El promedio de tus notas es: ", promedio
+	
+FinAlgoritmo
