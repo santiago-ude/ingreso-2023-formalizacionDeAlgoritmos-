@@ -1,0 +1,16 @@
+Algoritmo ejercicio3
+	
+	Definir numCalculo, cubo, cuarta Como Entero;
+	
+	
+	para i = 0 Hasta 10 Con Paso 1 Hacer
+	    Escribir "Dame un numero y lo elevo al cubo y a la cuarta";
+		Leer numCalculo;
+		
+		cubo = numCalculo^3;
+		cuarta = numCalculo^4;
+		
+		Escribir numCalculo, "^3 = ",cubo;
+		Escribir numCalculo, "^4 = ", cuarta;
+	FinPara
+FinAlgoritmo
