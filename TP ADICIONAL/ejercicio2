@@ -1,0 +1,19 @@
+Algoritmo ejercicio2
+	
+	Definir divisores, contador, cuenta como real;
+	Definir numeroEntero Como Entero;
+	
+	Escribir "Dame un numero entero";
+	leer numeroEntero;
+	
+	para i = 0 Hasta numeroEntero con paso 1 Hacer
+		contador = contador + 1;
+		
+		cuenta = numeroEntero MOD contador;
+		
+		si(cuenta == 0)Entonces
+			Escribir contador, " Es divisor de ", numeroEntero;
+		FinSi
+		
+	FinPara
+FinAlgoritmo
