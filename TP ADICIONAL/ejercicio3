@@ -1,0 +1,17 @@
+Algoritmo ejercicio4
+	
+	Definir numIngresado Como Entero;
+	Definir contador como real;
+	
+	Repetir
+		
+		Escribir "Dame un numero";
+		leer numIngresado
+		
+		si(numIngresado > 0)Entonces
+			contador = contador + 1;
+		FinSi
+	Hasta Que (numIngresado == 0)
+	Escribir "Numeros ingresados: ", contador;
+	
+FinAlgoritmo
