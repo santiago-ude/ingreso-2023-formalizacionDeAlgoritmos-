@@ -1,0 +1,26 @@
+Algoritmo ejercicio5 
+	
+	Definir numEntero Como Entero;
+	Definir contador, contadorPositivo, porcentaje como real;
+	
+		Repetir
+		Escribir "Dame un numero";
+		Leer numEntero;
+		
+		si(numEntero > 0  O numEntero < 0)Entonces
+			contador = contador + 1;
+		FinSi
+		
+		si(numEntero > 0) Entonces
+			
+			contadorPositivo = contadorPositivo + 1;
+		FinSi
+		
+	Hasta Que (numEntero == 0)
+	
+	porcentaje = (contadorPositivo/contador)*100;
+	
+	Escribir "la cantidad de numeros positivos es de un %", porcentaje;
+	
+	
+FinAlgoritmo
