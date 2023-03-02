@@ -1,0 +1,21 @@
+Algoritmo ejercicio6
+	
+	Definir max, numEntero, notaAlta Como Real;
+	
+	numBajo = 1000000;
+	
+	
+	repetir 
+		Escribir "Dame un numero";
+		Leer numEntero;
+		
+		si(numEntero < numBajo)Entonces
+			numBajo = numEntero;
+		FinSi
+		
+	Hasta Que (numEntero == 0)
+	
+	Escribir "El numero mas bajo es: ", numBajo;
+	
+	
+FinAlgoritmo
