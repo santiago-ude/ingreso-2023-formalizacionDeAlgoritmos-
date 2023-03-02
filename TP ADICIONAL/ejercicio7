@@ -1,0 +1,32 @@
+Algoritmo ejercicio7
+	definir num, numAlto, numBajo, cantNum, cuenta Como Real;
+	
+	Escribir "Cuantos numeros vas a ingresar?";
+	Leer cantNum;
+	
+	numAlto = -100000;
+	numBajo =  100000;
+	
+	
+	para i = 1 Hasta cantNum con paso 1 Hacer
+		
+		Escribir "dame el numero";
+		Leer num;
+		
+		si(num > numAlto )Entonces
+			numAlto = num;
+				
+		FinSi
+		
+		si(num < numBajo) Entonces
+			numBajo = num;
+		FinSi
+		
+	FinPara
+	
+	cuenta = numAlto - numBajo;
+	
+	Escribir "El rango entre ", numAlto " y ", numBajo, " Es ", cuenta;
+	
+	
+FinAlgoritmo
