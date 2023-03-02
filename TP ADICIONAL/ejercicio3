@@ -1,0 +1,17 @@
+Algoritmo ejercicio3
+	
+	
+	definir cantDados como entero;
+	Definir probabilidad como real;
+	
+	
+	Escribir "cuantos dados vas a tirar?";
+	Leer cantDados
+	
+	
+	para i = 1 hasta cantDados con paso 1 Hacer
+			probabilidad = (1/(6^cantDados))
+	FinPara
+	
+	Escribir "la probabilidad es de %", probabilidad;
+FinAlgoritmo
