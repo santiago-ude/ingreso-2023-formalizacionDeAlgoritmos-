@@ -1,0 +1,503 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include "astronauta.h"
+
+#define archiNave "archiNave.bin"
+
+#define maxCaracteres  100
+#define cantTiposDeNave  3
+#define cantTipoEstados 4
+#define cantOpcionesNave 5
+#define cantOperacionesMain 3
+
+
+typedef struct{
+
+    int ID;
+    char tipoNave[maxCaracteres];
+    int cantVuelosRealizados;
+    int horasAcumuladasVuelo;
+    int estado;
+}nave;
+
+//FUNCIONES
+
+void cargarTipoNave(nave* nav);
+
+void tiposDeNave(char naves[cantTiposDeNave][maxCaracteres]);
+
+void mostrarTiposDeNave(char naves[cantTiposDeNave][maxCaracteres]);
+
+int validacionTipoDeNave (int seleccion);
+
+void menuOpcionesNave();
+
+int validacionEstado (int seleccion);
+
+void mostrarEstados(char estados[cantTipoEstados][maxCaracteres]);
+
+void tiposEstado(char estados[cantTipoEstados][maxCaracteres]);
+
+void cargarEstado(nave* nav);
+
+int ultimoIde();
+
+int tamanoArchin();
+
+void funcionesAstronauta(astronauta* astro);
+
+void menuOperaciones();
+
+//---------------------------------MAIN--------------------------------------------------------------------------------
+
+
+
+
+
+int main()
+{
+    astronauta astro;
+    nave nav;
+
+    int operar;
+    char operadorMain[] = "si";
+
+
+
+
+    while(strcmp(operadorMain, "si") == 0)
+{
+
+
+        menuOperaciones();
+        printf("\nSELECCION: ");
+        fflush(stdin);
+        scanf("%i", &operar);
+
+
+
+        while (operar < 1 || operar > cantOperacionesMain){
+
+            printf("\nSeleccion invalida\nSELECCION: ");
+            fflush(stdin);
+            scanf("%i", &operar);
+        }
+
+
+    switch(operar){
+
+    case 1:
+
+    funcionesAstronauta(&astro);
+        break;
+
+
+    case 2:
+
+        break;
+
+    case 3:
+
+        break;
+
+    default:
+        break;
+    }
+
+        printf("|si| Hacer otra operacion\n|no|No hacer otra operacion");
+        fflush(operadorMain);
+        gets(operadorMain);
+
+        while (strcmp(operadorMain, "si") != 0 && strcmp(operadorMain, "no") != 0 )
+        {
+            printf("Ingrese una opcion valida: ");
+            fflush(stdin);
+            gets(operadorMain);
+        }
+        return 0;
+    }
+
+
+
+}
+
+
+
+
+void menuOperaciones()
+{
+
+printf("\n\n|1| ASTRONAUTA\n");
+printf("|2| NAVES\n");
+printf("|3| MISION\n");
+}
+
+
+//CARGAR NAVE COMPLETA
+
+void cargarNaveNueva(nave* nav)
+{
+
+    FILE* archi;
+
+    archi = fopen(archiNave, "ab+");
+
+   nav->ID = ultimoId();
+   cargarTipoNave(nav);
+   nav->horasAcumuladasVuelo = 0;
+   nav->cantVuelosRealizados = 0;
+
+
+    fwrite(nav, sizeof(nave),1, archi);
+
+    fclose(archi);
+}
+
+
+
+
+//CARGAR TIPO DE LA NAVE
+
+void cargarTipoNave(nave* nav)
+{
+    int seleccion;
+
+    char naves[cantTiposDeNave][maxCaracteres];
+    tiposDeNave(naves);
+
+    printf("Seleccione el tipo de nave \n");
+    mostrarTiposDeNave(naves);
+    scanf("%i", &seleccion);
+
+    int valido = validacionTipoDeNave(seleccion);
+
+    if(valido == 1)
+    {
+
+        strcpy(nav->tipoNave,naves[seleccion - 1]);
+
+    }
+    else if (valido == 0)
+    {
+
+        while (valido == 0)
+        {
+
+            printf("Inserta un numero asociado a un tipo de nave\n TIPO DE NAVE: ");
+            fflush(stdin);
+            scanf("%i", &seleccion);
+
+            valido = validacionTipoDeNave(seleccion);
+        }
+    }
+    strcpy(nav->tipoNave,naves[seleccion - 1]);
+}
+
+//CARGA EN LA MATRIZ LOS TIPOS DE NAVE
+void tiposDeNave(char naves[cantTiposDeNave][maxCaracteres])
+{
+
+
+    printf("\n");
+    strcpy(naves[0], "Starship");
+    strcpy(naves[1], "Falcon 9");
+    strcpy(naves[2], "Falcon Heavy");
+
+}
+
+void mostrarTiposDeNave(char naves[cantTiposDeNave][maxCaracteres])
+{
+
+    int i = 0;
+    int pos = 1;
+
+    while (i < cantTiposDeNave)
+    {
+
+        printf( "%i = ", pos);
+        printf("%s \n", naves[i]);
+
+        pos++;
+        i++;
+    }
+}
+
+int validacionTipoDeNave (int seleccion)
+{
+
+    int valido = 0;
+
+    if(seleccion <= cantTiposDeNave && seleccion > 0)
+    {
+
+        valido = 1;
+
+    }
+    else
+    {
+
+        valido = 0;
+    }
+
+    return valido;
+}
+
+
+void menuOpcionesNave()
+{
+
+    printf("|1| CARGAR NUEVA NAVE");
+
+}
+
+//----------------------------------------------------------------------------------------------------------
+int ultimoIde()
+{
+    nave aux;
+
+    FILE *archi = fopen(archiNave,"rb");
+    if(archi == NULL || tamanoArchi() == 0)
+    {
+        fclose(archi);
+        return 1;
+    }
+
+    fseek(archi,(sizeof(nave) * -1),SEEK_END);
+    fread(&aux,sizeof(nave),1,archi);
+
+    printf("ID: %i", aux.ID + 1);
+    return aux.ID + 1;
+}
+
+int tamanoArchin()
+{
+    FILE *fich;
+
+    fich=fopen(archiNave,"rb");
+
+    fseek(fich, 0, SEEK_END);
+    fclose(fich);
+    return ftell(fich)/sizeof(nave);
+
+}
+//-----------------------------------------------------------------------------------------------------
+
+
+void cargarEstado(nave* nav)
+{
+    int seleccion;
+
+    char estado[cantTipoEstados][maxCaracteres];
+    tiposEstado(estado);
+
+    printf("Seleccione el estado \n");
+    mostrarEstados(estado);
+    scanf("%i", &seleccion);
+
+    int valido = validacionEstado(seleccion);
+
+    if(valido == 1)
+    {
+
+        strcpy(nav->estado,estado[seleccion - 1]);
+
+    }
+    else if (valido == 0)
+    {
+
+        while (valido == 0)
+        {
+
+            printf("Inserta un numero asociado a un estado\n ESTADO: ");
+            fflush(stdin);
+            scanf("%i", &seleccion);
+
+            valido = validacionEstado(seleccion);
+        }
+    }
+    strcpy(nav->estado,estado[seleccion - 1]);
+}
+
+//CARGA EN LA MATRIZ LOS TIPOS DE NAVE
+void tiposEstado(char estados[cantTipoEstados][maxCaracteres])
+{
+
+
+    printf("\n");
+    strcpy(estados[0], " Mantenimiento");
+    strcpy(estados[1], " Lista para su uso");
+    strcpy(estados[2], " Mision");
+    strcpy(estados[3], " De baja");
+
+}
+
+void mostrarEstados(char estados[cantTipoEstados][maxCaracteres])
+{
+
+    int i = 0;
+    int pos = 1;
+
+    while (i < cantTipoEstados)
+    {
+
+        printf( "%i = ", pos);
+        printf("%s \n", estados[i]);
+
+        pos++;
+        i++;
+    }
+}
+
+
+int validacionEstado (int seleccion)
+{
+
+    int valido = 0;
+
+    if(seleccion <= cantTipoEstados && seleccion > 0)
+    {
+
+        valido = 1;
+
+    }
+    else
+    {
+
+        valido = 0;
+    }
+
+    return valido;
+}
+
+
+//EL "MAIN" CON LAS FUNCIONES DE ASTRONAUTAS
+void funcionesAstronauta(astronauta* astro)
+{
+    int operador;
+    char valor[] = "si";
+
+
+
+    while(strcmp(valor, "si") == 0)
+    {
+
+        menuOpcionesFunciones();
+        fflush(stdin);
+        scanf("%i", &operador);
+
+        while ( operador < 1 || operador > cantidadOpciones ) {
+
+        printf("Ingrese una opcion valida \n");
+        fflush(stdin);
+        scanf("%i", &operador);
+        }
+
+        switch(operador)
+        {
+
+        case 1:
+
+            cargarAstronautaNuevo(astro);
+            break;
+
+        case 2:
+            buscarAstronautaPorId();
+            break;
+
+        case 3:
+
+            cambiarEstadoAstronauta();
+            break;
+
+        case 4:
+            modificarAstronauta(astro);
+            break;
+
+        case 5:
+            mostrarAstronautas();
+            break;
+
+        default:
+            printf("Numero Incorrecto \n");
+            break;
+        }
+
+        printf("\n Ingrese 'si', para hacer una nueva operacion\n Ingrese 'no', para terminar el programa \n ");
+        fflush(stdin);
+        gets(valor);
+
+        if(strcmp(valor, "no") == 0){
+
+        reiniciarSistema();
+        saludoFinal(valor);
+        }
+
+        while (strcmp(valor, "si") != 0 && strcmp(valor, "no") != 0 )
+        {
+            printf("Ingrese una opcion valida: ");
+            fflush(stdin);
+            gets(valor);
+        }
+    }
+}
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//EL "MAIN" CON LAS FUNCIONES DE NAVES
+
+void funcionesNaves(nave* nav)
+{
+    int operador;
+    char valor[] = "si";
+
+
+
+    while(strcmp(valor, "si") == 0)
+    {
+
+        menuOpcionesFunciones();
+        fflush(stdin);
+        scanf("%i", &operador);
+
+        while ( operador < 1 || operador > cantidadOpciones ) {
+
+        printf("Ingrese una opcion valida \n");
+        fflush(stdin);
+        scanf("%i", &operador);
+        }
+
+        switch(operador)
+        {
+
+        case 1:
+
+        break;
+
+        default:
+            printf("Numero Incorrecto \n");
+            break;
+        }
+
+        printf("\n Ingrese 'si', para hacer una nueva operacion de naves\n Ingrese 'no', para terminar el programa \n ");
+        fflush(stdin);
+        gets(valor);
+
+         while (strcmp(valor, "si") != 0 && strcmp(valor, "no") != 0 )
+        {
+            printf("Ingrese una opcion valida: ");
+            fflush(stdin);
+            gets(valor);
+        }
+
+
+
+        if(strcmp(valor, "no") == 0){
+
+        return 0;
+        }
+
+    }
+
+
+}
